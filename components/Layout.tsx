@@ -4,7 +4,7 @@ import Nav from "./Nav";
 
 const Layout = ({ children }) => {
   return (
-    <Box bg="#0B0D17" h="100vh">
+    <Box bg="#0B0D17" h="100%">
       <Nav />
       {children}
     </Box>

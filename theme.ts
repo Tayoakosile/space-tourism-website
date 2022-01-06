@@ -49,4 +49,7 @@ export const theme = extendTheme({
     heading: "Bellefair",
     condensed: "Barlow Condensed",
   },
+  styles: {
+    body: { overflow: "hidden" },
+  },
 });
