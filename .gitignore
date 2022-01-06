@@ -2,7 +2,6 @@
 
 # dependencies
 /node_modules
-/starter-code
 /.pnp
 .pnp.js
 
@@ -36,3 +35,4 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+starter_code
