@@ -14,6 +14,8 @@ export const theme = extendTheme({
         },
         "3xl": {
           fontSize: "100px",
+          fontWeight: "normal",
+          lineHeight: "100px",
         },
         "2xl": {
           fontSize: "56px",
@@ -25,14 +27,18 @@ export const theme = extendTheme({
 
         lg: {
           fontSize: "28px",
-          fontWeight: "Barlow Condensed",
+          fontFamily: "Barlow Condensed",
         },
         md: {
           fontSize: "28px",
         },
         sm: {
           fontSize: "16px",
+          lineHeight: "25px",
+          fontStyle: "normal",
           letterSpacing: "2.7px",
+          fontWeight: "400",
+          fontFamily: "Barlow ",
         },
         xs: {
           fontSize: "14px",
@@ -48,8 +54,6 @@ export const theme = extendTheme({
   fonts: {
     heading: "Bellefair",
     condensed: "Barlow Condensed",
-  },
-  styles: {
-    body: { overflow: "hidden" },
+    barlow: "Barlow ",
   },
 });
