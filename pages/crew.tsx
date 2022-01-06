@@ -1,7 +1,7 @@
 import React from "react";
 
-const Destination = () => {
-  return <div>Destination</div>;
+const crew = () => {
+  return <div></div>;
 };
 
-export default Destination;
+export default crew;

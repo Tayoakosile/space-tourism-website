@@ -1,7 +1,7 @@
 import React from "react";
 
-const Destination = () => {
-  return <div>Destination</div>;
+const technology = () => {
+  return <div></div>;
 };
 
-export default Destination;
+export default technology;
