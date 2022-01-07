@@ -6,6 +6,7 @@ export const theme = extendTheme({
       baseStyle: {
         fontFamily: "Bellefair",
         color: "#fff",
+        fontWeight: "400",
         textTransform: "uppercase",
       },
       sizes: {
@@ -38,7 +39,7 @@ export const theme = extendTheme({
           fontStyle: "normal",
           letterSpacing: "2.7px",
           fontWeight: "400",
-          fontFamily: "Barlow ",
+          fontFamily: "Barlow",
         },
         xs: {
           fontSize: "14px",

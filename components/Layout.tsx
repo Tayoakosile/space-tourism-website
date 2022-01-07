@@ -8,10 +8,10 @@ const Layout = ({ children }) => {
   const [isHeaderPinned, setIsHeaderPinned] = useState<boolean>(false);
 
   return (
-    <Box bg="#0B0D17" h="100%">
+    <Box bg="rgb(11 13 25)" mb='4' h="100%">
       <Box
         as={Headroom}
-        mb="24px"
+        height="100px !important"
         onPin={() => {
           setIsHeaderPinned(true);
           console.log("pinned");

@@ -7,9 +7,7 @@ const Nav = ({ isHeaderPinned }: { isHeaderPinned: boolean }) => {
   return (
     <Box
       position={"sticky"}
-      bg={isHeaderPinned ? "rgb(52 69 93 / 62%)" : "transparent"}
-      //   variants={BoxVariant}
-      //   animate={isHeaderPinned ? "initial" : "visible"}
+      bg={isHeaderPinned ? "rgb(52 69 93 / 23%)" : "transparent"}
       initial={{ opacity: "2" }}
       mb="48px"
       top="0"

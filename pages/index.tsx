@@ -8,7 +8,8 @@ const index = () => {
       as="section"
       className="app-bg"
       bgImage={"url('/img/home/background-home-mobile.jpg')"}
-      px='24px'
+      px="24px"
+      height="100vh"
     >
       <VStack spacing="16px">
         <Heading size="sm" align="center">

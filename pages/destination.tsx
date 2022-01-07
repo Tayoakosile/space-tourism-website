@@ -1,19 +1,21 @@
-import { Box, Heading, HStack } from "@chakra-ui/react";
+import { Box, Heading, HStack, Tabs } from "@chakra-ui/react";
 import React from "react";
+import AppTab from "../components/AppTab";
 
 const Destination = () => {
   return (
     <Box
       as="section"
       className="app-bg"
-      bgImage={"url('./img/background-destination-mobile.jpg"}
+      bgImage={"url('/img/destination/background-destination-mobile.jpg')"}
     >
-      <HStack justifyContent={"center"}>
+      <HStack justifyContent={"center"} pb="32px">
         <Heading
           as="span"
           size="sm"
           mixBlendMode={"normal"}
           opacity="0.25"
+          fontWeight="bold"
           textAlign="center"
         >
           01
@@ -22,6 +24,7 @@ const Destination = () => {
           Pick your destination
         </Heading>
       </HStack>
+      <AppTab />
     </Box>
   );
 };
