@@ -40,12 +40,7 @@ export default function CaptionCarousel() {
   const side = useBreakpointValue({ base: "30%", md: "40px" });
 
   return (
-    <Box
-      position={"relative"}
-      height={"100%"}
-      pb='12'
-      overflow={"hidden"}
-    >
+    <Box position={"relative"} height={"100%"} pb="12" overflow={"hidden"}>
       <Slider {...settings} ref={(slider) => setSlider(slider)}>
         {technology.map((technology, index) => (
           <Box key={technology.name}>
@@ -58,17 +53,24 @@ export default function CaptionCarousel() {
             </VStack>
             {/* This is the block you need to change, to customize the caption */}
             {/* This is the block you need to change, to customize the caption */}
-            <VStack textAlign="center" spacing="16px" px="24px">
-              <VStack fontFamily="Bellefair" as="span" spacing="9px">
-                <Heading size="xs">The Terminology</Heading>
-                <Heading size="lg">{technology.name}</Heading>
+            <VStack textAlign="center"  spacing="16px" px="24px">
+              <VStack fontFamily="Bellefair " as="span" spacing="9px">
+                <Heading
+                  size="xs"
+                  letterSpacing="2.36px"
+                  fontWeight="400"
+                  color="#D0D6F9"
+                  fontFamily="Barlow Condensed"
+                >
+                  The Terminology
+                </Heading>
+                        <Heading size="lg"
+                  fontFamily="Bellefair"
+
+                        >{technology.name}</Heading>
               </VStack>
 
-              <Text
-                fontFamily="Barlow"
-                
-                color="#fff"
-              >
+              <Text fontFamily="Barlow" color="#fff">
                 {technology.description}
               </Text>
             </VStack>
