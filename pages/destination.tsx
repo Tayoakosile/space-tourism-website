@@ -24,6 +24,7 @@ const Destination = () => {
           Pick your destination
         </Heading>
       </HStack>
+
       <AppTab />
     </Box>
   );

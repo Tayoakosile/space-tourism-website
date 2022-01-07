@@ -18,10 +18,10 @@ const crew = () => {
           fontWeight="bold"
           textAlign="center"
         >
-          01
+          02
         </Heading>
         <Heading size="sm" align="center">
-          Pick your destination
+          Meet your crew
         </Heading>
       </HStack>
 

@@ -14,7 +14,7 @@ import {
 // import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
 // And react-slick as our Carousel Lib
 import Slider from "react-slick";
-import { crew } from "../model";
+import { technology } from "../model";
 
 // Settings for the slider
 const settings = {
@@ -42,32 +42,34 @@ export default function CaptionCarousel() {
   return (
     <Box
       position={"relative"}
-      height={"600px"}
-      width={"full"}
+      height={"100%"}
+      pb='12'
       overflow={"hidden"}
     >
       <Slider {...settings} ref={(slider) => setSlider(slider)}>
-        {crew.map((crew, index) => (
-          <Box key={crew.name}>
+        {technology.map((technology, index) => (
+          <Box key={technology.name}>
             <VStack mb="74px">
-              <Image width={226} height={222} src={crew.images.webp} />
-              <Divider w="80%" />
+              <Image
+                width={375}
+                height={170}
+                src={technology.images.portrait}
+              />
             </VStack>
             {/* This is the block you need to change, to customize the caption */}
             {/* This is the block you need to change, to customize the caption */}
-            <VStack
-              textAlign="center"
-              fontFamily={"Bellefair"}
-              spacing="16px"
-              px="24px"
-            >
-              <span>
-                <Heading size="xs">{crew.role}</Heading>
-                <Heading size="lg">{crew.name}</Heading>
-              </span>
+            <VStack textAlign="center" spacing="16px" px="24px">
+              <VStack fontFamily="Bellefair" as="span" spacing="9px">
+                <Heading size="xs">The Terminology</Heading>
+                <Heading size="lg">{technology.name}</Heading>
+              </VStack>
 
-              <Text fontSize={{ base: "md", lg: "lg" }} color="GrayText">
-                {crew.bio}
+              <Text
+                fontFamily="Barlow"
+                
+                color="#fff"
+              >
+                {technology.description}
               </Text>
             </VStack>
           </Box>

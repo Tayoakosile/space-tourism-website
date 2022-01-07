@@ -6,3 +6,11 @@ html,
   /* height: 100%; */
   background-attachment: fixed;
 }
+
+/* slide dots */
+.slick-dots {
+  bottom: 270px !important;
+}
+.slick-dots li button:before {
+  color:#FFFFFF!important;
+}

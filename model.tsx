@@ -1,6 +1,11 @@
 type ArrayOfObject = {
   name: string;
-  images: { png: string; webp: string };
+  images: {
+    png?: string;
+    webp?: string;
+    portrait?: string;
+    landscape?: string;
+  };
   description?: string;
   role?: string;
   bio?: string;
@@ -93,7 +98,8 @@ export const crew: ArrayOfObject[] = [
     bio: "Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. Ansari was the fourth self-funded space tourist, the first self-funded woman to fly to the ISS, and the first Iranian in space.",
   },
 ];
-export const technology = [
+
+export const technology: ArrayOfObject[] = [
   {
     name: "Launch vehicle",
     images: {

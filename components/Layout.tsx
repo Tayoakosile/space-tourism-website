@@ -8,7 +8,20 @@ const Layout = ({ children }) => {
   const [isHeaderPinned, setIsHeaderPinned] = useState<boolean>(false);
 
   return (
-    <Box bg="rgb(11 13 25)" mb='4' h="100%">
+    <Box bg="rgb(11 13 25)" h="100%">
+      {/* CSS files for react-slick */}
+      <link
+        rel="stylesheet"
+        type="text/css"
+        charSet="UTF-8"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+      />
+      <link
+        rel="stylesheet"
+        type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+      />
+
       <Box
         as={Headroom}
         height="100px !important"
