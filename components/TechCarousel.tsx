@@ -1,15 +1,12 @@
-import React from "react";
-import { VStack } from "@chakra-ui/react";
 import {
   Box,
-  Divider,
-  Container,
   Heading,
   Image,
-  Stack,
   Text,
   useBreakpointValue,
+  VStack,
 } from "@chakra-ui/react";
+import React from "react";
 // Here we have used react-icons package for the icons
 // import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
 // And react-slick as our Carousel Lib
@@ -47,6 +44,7 @@ export default function CaptionCarousel() {
           <Box key={technology.name}>
             <VStack mb="100px">
               <Image
+                alt={technology.name}
                 width={375}
                 height={170}
                 src={technology.images.portrait}

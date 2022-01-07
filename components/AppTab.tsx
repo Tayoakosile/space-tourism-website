@@ -23,6 +23,7 @@ const AppTab = () => {
         <VStack mb="26px " mt="32px">
           <Image
             src={destinations[index].images.webp}
+            alt="Destination image"
             width={170}
             height={170}
           />

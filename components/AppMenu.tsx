@@ -21,7 +21,12 @@ export default function DrawerExample() {
   return (
     <>
       <Box as="span" ref={btnRef} onClick={onOpen}>
-        <Image src="/img/icon-hamburger.svg" width={24} height={21} />
+        <Image
+          alt="Logo hamburger"
+          src="/img/icon-hamburger.svg"
+          width={24}
+          height={21}
+        />
       </Box>
 
       <Drawer
@@ -52,7 +57,12 @@ export default function DrawerExample() {
                 { link: "crew", no: "03" },
                 { link: "technology", no: "04" },
               ].map(({ link, no }) => (
-                <HStack key={no} as="span" pl='32px' fontFamily="Barlow Condensed">
+                <HStack
+                  key={no}
+                  as="span"
+                  pl="32px"
+                  fontFamily="Barlow Condensed"
+                >
                   <Heading
                     as="p"
                     size="sm"

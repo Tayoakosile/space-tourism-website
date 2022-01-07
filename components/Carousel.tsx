@@ -19,7 +19,7 @@ import { crew } from "../model";
 // Settings for the slider
 const settings = {
   dots: true,
-  dotsClass:'slick-dots slick-crew-dots',
+  dotsClass: "slick-dots slick-crew-dots",
   arrows: false,
   fade: true,
   infinite: true,
@@ -51,7 +51,12 @@ export default function CaptionCarousel() {
         {crew.map((crew, index) => (
           <Box key={crew.name}>
             <VStack mb="74px">
-              <Image width={226} height={222} src={crew.images.webp} />
+              <Image
+                width={226}
+                alt={crew.name}
+                height={222}
+                src={crew.images.webp}
+              />
               <Divider w="80%" />
             </VStack>
             {/* This is the block you need to change, to customize the caption */}
@@ -67,7 +72,13 @@ export default function CaptionCarousel() {
                 <Heading size="lg">{crew.name}</Heading>
               </span>
 
-              <Heading size="sm" fontFamily='Barlow' as='p' textTransform="none" color="#D0D6F9">
+              <Heading
+                size="sm"
+                fontFamily="Barlow"
+                as="p"
+                textTransform="none"
+                color="#D0D6F9"
+              >
                 {crew.bio}
               </Heading>
             </VStack>
