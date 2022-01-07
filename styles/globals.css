@@ -8,17 +8,17 @@ html,
 }
 
 /* slide dots */
-.slick-dots {
-  bottom: 250px !important;
+.slick-tech-dots {
+  bottom: 274px !important;
 }
 
-.slick-dots li {
+.slick-tech-dots li {
   height: 40px !important;
-  margin: 0px 16px;
+  margin: 0px 16px !important;
   width: 40px !important;
 }
-.slick-dots li button:before {
-  color: #0B0D17 !important;
+.slick-tech-dots li button:before {
+  color: #0b0d17 !important;
   font-size: 16px !important;
   font-family: "Bellefair";
   height: 40px !important;
@@ -29,12 +29,22 @@ html,
   background: white;
   border-radius: 50%;
 }
-.slick-dots li:nth-of-type(1) button:before {
+.slick-tech-dots li:nth-of-type(1) button:before {
   content: "1" !important;
 }
-.slick-dots li:nth-of-type(2) button:before {
+.slick-tech-dots li:nth-of-type(2) button:before {
   content: "2" !important;
 }
-.slick-dots li:nth-of-type(3) button:before {
+.slick-tech-dots li:nth-of-type(3) button:before {
   content: "3" !important;
 }
+
+/* Crew slider dots */
+.slick-crew-dots {
+  bottom: 290px !important;
+}
+.slick-crew-dots li button::before {
+  color: white !important;
+  font-size: 10px;
+}
+/* Crew slider dots */

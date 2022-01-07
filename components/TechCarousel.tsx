@@ -24,6 +24,7 @@ const settings = {
   infinite: true,
   autoplay: true,
   speed: 500,
+  dotsClass: " slick-dots slick-tech-dots",
   autoplaySpeed: 5000,
   slidesToShow: 1,
   slidesToScroll: 1,
@@ -44,16 +45,14 @@ export default function CaptionCarousel() {
       <Slider {...settings} ref={(slider) => setSlider(slider)}>
         {technology.map((technology, index) => (
           <Box key={technology.name}>
-            <VStack mb="74px">
+            <VStack mb="100px">
               <Image
                 width={375}
                 height={170}
                 src={technology.images.portrait}
               />
             </VStack>
-            {/* This is the block you need to change, to customize the caption */}
-            {/* This is the block you need to change, to customize the caption */}
-            <VStack textAlign="center"  spacing="16px" px="24px">
+            <VStack textAlign="center" spacing="16px" px="24px">
               <VStack fontFamily="Bellefair " as="span" spacing="9px">
                 <Heading
                   size="xs"
@@ -64,10 +63,9 @@ export default function CaptionCarousel() {
                 >
                   The Terminology
                 </Heading>
-                        <Heading size="lg"
-                  fontFamily="Bellefair"
-
-                        >{technology.name}</Heading>
+                <Heading size="lg" fontFamily="Bellefair">
+                  {technology.name}
+                </Heading>
               </VStack>
 
               <Text fontFamily="Barlow" color="#fff">

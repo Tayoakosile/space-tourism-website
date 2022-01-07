@@ -8,12 +8,12 @@ import { theme } from "../theme";
 import Layout from "../components/Layout";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return ( 
-    <Layout>
-      <ChakraProvider theme={theme}>
+  return (
+    <ChakraProvider theme={theme}>
+      <Layout>
         <Component {...pageProps} />
-      </ChakraProvider>
-    </Layout>
+      </Layout>
+    </ChakraProvider>
   );
 }
 

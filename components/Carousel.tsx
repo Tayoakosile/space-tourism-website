@@ -19,6 +19,7 @@ import { crew } from "../model";
 // Settings for the slider
 const settings = {
   dots: true,
+  dotsClass:'slick-dots slick-crew-dots',
   arrows: false,
   fade: true,
   infinite: true,
@@ -66,9 +67,9 @@ export default function CaptionCarousel() {
                 <Heading size="lg">{crew.name}</Heading>
               </span>
 
-              <Text fontSize={{ base: "md", lg: "lg" }} color="GrayText">
+              <Heading size="sm" fontFamily='Barlow' as='p' textTransform="none" color="#D0D6F9">
                 {crew.bio}
-              </Text>
+              </Heading>
             </VStack>
           </Box>
         ))}

@@ -18,10 +18,10 @@ const crew = () => {
           fontWeight="bold"
           textAlign="center"
         >
-          02
+          03
         </Heading>
         <Heading size="sm" align="center">
-          Meet your crew
+          SPACE LAUNCH 101
         </Heading>
       </HStack>
 
