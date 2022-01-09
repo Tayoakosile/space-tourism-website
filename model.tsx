@@ -1,5 +1,7 @@
 type ArrayOfObject = {
   name: string;
+  width?: string;
+  height?: string;
   images: {
     png?: string;
     webp?: string;
@@ -63,6 +65,8 @@ export const destinations: ArrayOfObject[] = [
 export const crew: ArrayOfObject[] = [
   {
     name: "Douglas Hurley",
+    width: "177px",
+    height: "222px",
     images: {
       png: "/img/crew/image-douglas-hurley.png",
       webp: "/img/crew/image-douglas-hurley.webp",
@@ -72,6 +76,8 @@ export const crew: ArrayOfObject[] = [
   },
   {
     name: "Mark Shuttleworth",
+    width: "153.92px",
+    height: "222px",
     images: {
       png: "/img/crew/image-mark-shuttleworth.png",
       webp: "/img/crew/image-mark-shuttleworth.webp",
@@ -81,6 +87,9 @@ export const crew: ArrayOfObject[] = [
   },
   {
     name: "Victor Glover",
+    width: "180.73px",
+    height: "222px",
+
     images: {
       png: "/img/crew/image-victor-glover.png",
       webp: "/img/crew/image-victor-glover.webp",
@@ -90,6 +99,8 @@ export const crew: ArrayOfObject[] = [
   },
   {
     name: "Anousheh Ansari",
+    width: "226.15px",
+    height: "222px",
     images: {
       png: "/img/crew/image-anousheh-ansari.png",
       webp: "/img/crew/image-anousheh-ansari.webp",

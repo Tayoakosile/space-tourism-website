@@ -9,11 +9,11 @@ const index = () => {
       as="section"
       className="app-bg"
       bgImage={"url('/img/home/background-home-mobile.jpg')"}
-      px="  24px"
-      height="100vh"
+      px="24px"
+      height="100%"
     >
       <VStack
-        spacing={{ base: "16px", md: "4px" }}
+        spacing={{ base: "16px", md: "-22px" }}
         pt={{ base: "initial", md: "106px" }}
       >
         <Heading
@@ -21,7 +21,8 @@ const index = () => {
           // fontSize={{ md: "20px" }}
           align="center"
           color={{ base: "#fff", md: "#D0D6F9" }}
-          fontFamily={{ md: "Barlow Condensed" }}
+          fontFamily={{ base: "Bellefair", md: "Barlow Condensed" }}
+          letterSpacing={{ base: "1", md: "3.375px" }}
         >
           So you want to travel to
         </Heading>

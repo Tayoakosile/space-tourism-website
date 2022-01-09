@@ -1,0 +1,6 @@
+.alice-carousel .alice-carousel__dots {
+  position: absolute !important;
+  top: 219px;
+  /* margin-left: -40px; */
+  left: 38%;
+}

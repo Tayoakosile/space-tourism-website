@@ -8,7 +8,7 @@ import Nav from "./Nav";
 const Layout = ({ children }) => {
   const [isHeaderPinned, setIsHeaderPinned] = useState<boolean>(false);
   return (
-    <Box bg={{ base: "rgb(11 13 25)" }} h="100vh">
+    <Box bg={{ base: "rgb(11 13 25)" }} backgroundSize="auto 100%">
       {/* CSS files for react-slick */}
       <link
         rel="stylesheet"
