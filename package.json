@@ -16,6 +16,7 @@
     "@fontsource/bellefair": "^4.5.0",
     "framer-motion": "^5.5.5",
     "next": "12.0.7",
+    "pure-react-carousel": "^1.27.8",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-headroom": "^3.2.0",

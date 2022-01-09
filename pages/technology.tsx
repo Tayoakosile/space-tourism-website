@@ -7,8 +7,7 @@ const crew = () => {
     <Box
       as="section"
       className="app-bg"
-      bgImage={"url('/img/technology/background-technology-mobile.jpg')"}
-
+      // bgImage={"url('/img/technology/background-technology-mobile.jpg')"}
     >
       <HStack
         justifyContent={{ base: "center", md: "flex-start" }}
