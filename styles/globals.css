@@ -4,7 +4,7 @@ html,
   background-size: cover;
   background-position: center;
   /* height: 100%; */
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
 }
 
 /* slide dots */
@@ -17,6 +17,7 @@ html,
   margin: 0px 16px !important;
   width: 40px !important;
 }
+
 .slick-tech-dots li button:before {
   color: #0b0d17 !important;
   font-size: 16px !important;
@@ -48,3 +49,23 @@ html,
   font-size: 10px;
 }
 /* Crew slider dots */
+
+/* Media queries */
+
+@media only screen and (min-width: 708px) {
+  .slick-dots.slick-tech-dots {
+    bottom: 185px !important;
+  }
+  .slick-tech-dots li {
+    margin: 0px 16px !important;
+  }
+
+  .slick-tech-dots li button::before {
+    height: 60px !important;
+    margin: 0px 16px !important;
+    width: 60px !important;
+    font-size: 24px !important;
+  }
+}
+
+/* Media queries */

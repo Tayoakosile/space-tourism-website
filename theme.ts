@@ -10,9 +10,14 @@ export const theme = extendTheme({
         textTransform: "uppercase",
       },
       sizes: {
+        "5xl": {
+          fontSize: "150px",
+        },
+
         "4xl": {
           fontSize: "120px",
         },
+
         "3xl": {
           fontSize: "100px",
           fontWeight: "normal",
@@ -31,7 +36,7 @@ export const theme = extendTheme({
           fontFamily: "Barlow Condensed",
         },
         md: {
-          fontSize: "28px",
+          fontSize: "20px",
         },
         sm: {
           fontSize: "16px",

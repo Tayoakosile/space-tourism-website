@@ -13,11 +13,16 @@ const Nav = ({ isHeaderPinned }: { isHeaderPinned: boolean }) => {
         bg={isHeaderPinned ? "rgb(52 69 93 / 23%)" : "transparent"}
         initial={{ opacity: "2" }}
         mb="48px"
-        top="0"
+      top="0"
       >
         <HStack as="header" justifyContent={"space-between"} p="24px">
           <a href="/">
-            <Image alt='Companies logo' src="/img/logo.svg" width={40} height={40} />
+            <Image
+              alt="Companies logo"
+              src="/img/logo.svg"
+              width={40}
+            height={40}
+            />
           </a>
           <AppMenu />
         </HStack>

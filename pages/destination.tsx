@@ -6,10 +6,12 @@ const Destination = () => {
   return (
     <Box
       as="section"
+      px ='24px'
+      pt={{ base: 'initial', md: '40px'}}
       className="app-bg"
       bgImage={"url('/img/destination/background-destination-mobile.jpg')"}
     >
-      <HStack justifyContent={"center"} pb="32px">
+      <HStack justifyContent={{base:"center",md:'flex-start'}} pb="32px">
         <Heading
           as="span"
           size="sm"
@@ -20,7 +22,7 @@ const Destination = () => {
         >
           01
         </Heading>
-        <Heading size="sm" align="center">
+        <Heading size="sm" align={{ base: "center", md: "left" }}>
           Pick your destination
         </Heading>
       </HStack>

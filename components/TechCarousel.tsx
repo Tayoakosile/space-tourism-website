@@ -1,3 +1,5 @@
+import React from "react";
+import { useMediaQuery } from "@chakra-ui/react";
 import {
   Box,
   Heading,
@@ -6,10 +8,7 @@ import {
   useBreakpointValue,
   VStack,
 } from "@chakra-ui/react";
-import React from "react";
-// Here we have used react-icons package for the icons
-// import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
-// And react-slick as our Carousel Lib
+
 import Slider from "react-slick";
 import { technology } from "../model";
 
@@ -28,12 +27,17 @@ const settings = {
 };
 
 export default function CaptionCarousel() {
-  // As we have used custom buttons, we need a reference variable to
-  // change the state
   const [slider, setSlider] = React.useState<Slider | null>(null);
+  const [isLargerQuery, setIsLargerQuery] = React.useState<boolean>(false);
 
-  // These are the breakpoints which changes the position of the
-  // buttons as the screen size changes
+  /* Breakpoints */
+  const [isLargerThan768] = useMediaQuery("(min-width: 768px)");
+  React.useEffect(() => {
+    isLargerThan768 ? setIsLargerQuery(true) : setIsLargerQuery(false);
+    console.log(isLargerThan768, isLargerQuery);
+  }, [isLargerThan768]);
+
+  /* Breakpoints */
   const top = useBreakpointValue({ base: "90%", md: "50%" });
   const side = useBreakpointValue({ base: "30%", md: "40px" });
 
@@ -45,9 +49,13 @@ export default function CaptionCarousel() {
             <VStack mb="100px">
               <Image
                 alt={technology.name}
-                width={375}
-                height={170}
-                src={technology.images.portrait}
+                width={isLargerQuery ? 768 : 375}
+                height={isLargerQuery ? 422 : 170}
+                src={
+                  isLargerQuery
+                    ? technology.images.portrait
+                    : technology.images.landscape
+                }
               />
             </VStack>
             <VStack textAlign="center" spacing="16px" px="24px">
@@ -61,14 +69,25 @@ export default function CaptionCarousel() {
                 >
                   The Terminology
                 </Heading>
-                <Heading size="lg" fontFamily="Bellefair">
+                <Heading
+                  size="lg"
+                  fontSize={{ base: "32px", md: "40px" }}
+                  fontFamily="Bellefair"
+                >
                   {technology.name}
                 </Heading>
               </VStack>
-
-              <Text fontFamily="Barlow" color="#fff">
+              <Heading
+                size="sm"
+                textTransform={"initial"}
+                fontWeight={"400"}
+                width={{ base: "100%", md: "90%" }}
+                fontFamily="Barlow"
+                as="p"
+                color="#fff"
+              >
                 {technology.description}
-              </Text>
+              </Heading>
             </VStack>
           </Box>
         ))}

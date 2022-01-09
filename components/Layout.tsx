@@ -1,14 +1,14 @@
 import { Box } from "@chakra-ui/react";
 import React, { useState } from "react";
 import Headroom from "react-headroom";
-import Nav from "./Nav";
 import "../styles/Layout.module.css";
+import DesktopNav from "./DesktopNav";
+import Nav from "./Nav";
 
 const Layout = ({ children }) => {
   const [isHeaderPinned, setIsHeaderPinned] = useState<boolean>(false);
-
   return (
-    <Box bg="rgb(11 13 25)" h="100%">
+    <Box bg={{ base: "rgb(11 13 25)" }} h="100vh">
       {/* CSS files for react-slick */}
       <link
         rel="stylesheet"
@@ -24,6 +24,7 @@ const Layout = ({ children }) => {
 
       <Box
         as={Headroom}
+        d={{ base: "block", md: "none" }}
         height="100px !important"
         onPin={() => {
           setIsHeaderPinned(true);
@@ -35,6 +36,9 @@ const Layout = ({ children }) => {
         }}
       >
         <Nav isHeaderPinned={isHeaderPinned} />
+      </Box>
+      <Box d={{ base: "none", md: "block" }}>
+        <DesktopNav />
       </Box>
       {children}
     </Box>
