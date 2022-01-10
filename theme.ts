@@ -33,6 +33,7 @@ export const theme = extendTheme(
           },
           sm: {
             fontSize: "16px",
+            fontWeight: "15px",
             letterSpacing: "2.7px",
           },
           xs: {
@@ -48,8 +49,9 @@ export const theme = extendTheme(
     },
     fonts: {
       heading: "Bellefair",
+      body:'Bellefair',
       condensed: "Barlow Condensed",
     },
-  },
-  withDefaultColorScheme({ colorScheme: "whiteAlpha" })
+  }
+  // withDefaultColorScheme({ colorScheme: "white" })
 );
