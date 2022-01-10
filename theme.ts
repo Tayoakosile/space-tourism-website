@@ -33,7 +33,7 @@ export const theme = extendTheme(
           },
           sm: {
             fontSize: "16px",
-            fontWeight: "15px",
+            fontWeight: "400",
             letterSpacing: "2.7px",
           },
           xs: {
@@ -44,7 +44,7 @@ export const theme = extendTheme(
       },
     },
     colors: {
-      darkGray: "#0B0D17",
+      dark: "#0B0D17",
       lightGreen: "#D0D6F9",
     },
     fonts: {
