@@ -5,7 +5,7 @@ const Header = ({ no, word }: { no: string; word: string }) => {
   return (
     <HStack
       justify={{ base: "center", md: "flex-start" }}
-      pl={{base:"",lg:'12'}}
+      pl={{ base: "", lg: "12" }}
       alignItems={"center"}
       pb={{ base: "", md: "", lg: "50px" }}
     >

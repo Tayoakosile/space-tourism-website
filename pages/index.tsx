@@ -6,7 +6,7 @@ const index = () => {
   return (
     <Stack
       direction={{ base: "column", lg: "row" }}
-      pt={{ base: "56px", md: "106px", lg: "151px" }}
+      pt={{ base: "126px", md: "156px", lg: "180px" }}
       px={{ base: "24px", md: "159px", lg: "105px" }}
       pb="12px"
       as="section"
@@ -42,7 +42,7 @@ const index = () => {
           textTransform={"none"}
           fontWeight={"400"}
           fontFamily={"Barlow"}
-          width={{ base: "100%", md: "80%" }}
+          width={{ base: "100%", md: "90%" }}
           mx={"auto"}
           color="#D0D6F9"
           as="p"

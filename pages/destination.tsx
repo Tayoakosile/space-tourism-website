@@ -1,24 +1,15 @@
-import { Box, useMediaQuery } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import React from "react";
+import useMedia from "../useMediaQuery";
 import Header from "./components/Header";
 import AppTab from "./components/Tab";
 
 const Destination = () => {
-  const [isLargerThan768] = useMediaQuery("(min-width:760px)");
-  const [isLargerThan1024] = useMediaQuery("(min-width:1024px)");
-  const [isTabletSize, setIsTabletSize] = React.useState<boolean>(false);
-  const [isLaptopSize, setIsLaptopSize] = React.useState<boolean>(false);
-
-  React.useEffect(() => {
-    setIsTabletSize(isLargerThan768);
-    console.log("is laptop size", isLargerThan1024);
-    setIsLaptopSize(isLargerThan1024);
-  }, [isLargerThan768, isLargerThan1024]);
-
+  const { isTabletSize, isLaptopSize } = useMedia();
   return (
     <Box
       as="section"
-      pt={{ base: "88px", md: "124px" }}
+      pt={{ base: "124px", md: "124px" }}
       px="24px"
       bgImage={{
         base: 'url("img/destination/background-destination-mobile.jpg")',

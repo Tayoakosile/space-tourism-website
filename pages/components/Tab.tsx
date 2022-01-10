@@ -27,7 +27,7 @@ const AppTab = ({
   return (
     <Stack
       mt={{ base: "32px", md: "40px" }}
-      spacing={{ base: "157px" ,md:'1'}}
+      spacing={{ base:'1',lg: "157px"}}
       direction={{ base: "column", lg: "row" }}
     >
       <VStack
