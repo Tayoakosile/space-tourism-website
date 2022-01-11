@@ -27,19 +27,20 @@ export default function MobileNav() {
       pt="33px"
       justify={"space-between"}
     >
-      <Box as="span">
-        <Link href="/"> 
-          <Image src={"/img/shared/logo.svg"} width="40px" height="40px" />
-        </Link>
-      </Box>
+      <Link href="/">
+        <Box as="span">
+          <Image src={"/img/shared/logo.svg"} alt ="Company's Logo" width="40px" height="40px" />
+        </Box>
+      </Link>
 
-      <Box>
-        <Box as="span" ref={btnRef}  onClick={onOpen}>
-        <Image
-          src={"/img/shared/icon-hamburger.svg"}
-          width="24px"
-          height="21px"
-        />
+      <Box ref={btnRef} onClick={onOpen}>
+        <Box as="span">
+          <Image
+            src={"/img/shared/icon-hamburger.svg"}
+            alt='Menu Icon'
+            width="24px"
+            height="21px"
+          />
         </Box>
         <Drawer
           isOpen={isOpen}
@@ -67,7 +68,6 @@ export default function MobileNav() {
                   { link: "home", no: "01" },
                   { link: "destination", no: "02" },
                   { link: "crew", no: "03" },
-                  { link: "technology", no: "04" },
                 ].map(({ link, no }) => (
                   <HStack
                     key={no}

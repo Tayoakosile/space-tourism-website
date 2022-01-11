@@ -6,9 +6,9 @@ const Header = ({ no, word }: { no: string; word: string }) => {
     <HStack
       justify={{ base: "center", md: "flex-start" }}
       pl={{ base: "", md: "38.5px", lg: "14" }}
-      mt={{ md: "130px", lg: "12" }}
+      mt={{ md: "40px", lg: "12" }}
       alignItems={{ base: "center", md: "baseline" }}
-      pb={{ base: "", md: "60px", lg: "30px" }}
+      pb={{ base: "", md: "50px", lg: "30px" }}
     >
       <Heading
         fontFamily={"Barlow Condensed"}

@@ -1,19 +1,13 @@
 import {
-  Box,
   Flex,
-  Heading,
-  Link,
+  Heading, HStack, Link,
   Popover,
   PopoverTrigger,
-  Stack,
-  HStack,
-  Text,
-  useColorModeValue,
+  Stack
 } from "@chakra-ui/react";
 import Image from "next/image";
 import React from "react";
 import useMedia from "../../../useMediaQuery";
-
 export default function WithSubnavigation() {
   return (
     <Flex
@@ -25,8 +19,16 @@ export default function WithSubnavigation() {
       align={"center"}
     >
       {/* Logo */}
+
+      
+
       <Flex pt="24px" justify={"center"}>
-        <Image src="/img/shared/logo.svg" width={48} height={48} />
+        <Image
+          alt={"company's logo"}
+          src="/img/shared/logo.svg"
+          width={48}
+          height={48}
+        />
       </Flex>
       {/* Logo */}
 
@@ -42,15 +44,15 @@ const DesktopNav = () => {
 
   return (
     <Stack
-      width={{ base: "", md: "500px", lg: "800px" }}
+      width={{ base: "", md: "400px", lg: "500px" }}
       height="96px"
       alignItems={"center"}
       justify={"center"}
       bg="rgba(255, 255, 255, 0.04)"
       backdropFilter="blur(81.5485px)"
       direction={"row"}
-      mt ={{lg:'40px'}}
-      spacing={{ base: "", md: "37px", lg: "50px" }}
+      mt={{ lg: "40px" }}
+      spacing={{ base: "", md: "50px", lg: "50px" }}
     >
       {NAV_ITEMS.map((navItem, index) => (
         <React.Fragment key={navItem.label}>
@@ -93,7 +95,6 @@ const DesktopNav = () => {
   );
 };
 
-
 interface NavItem {
   label: string;
   href: string;
@@ -111,9 +112,5 @@ const NAV_ITEMS: Array<NavItem> = [
   {
     label: "Crew",
     href: "/crew",
-  },
-  {
-    label: "Technology",
-    href: "/technology",
   },
 ];
