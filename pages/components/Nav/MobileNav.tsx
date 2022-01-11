@@ -28,17 +28,19 @@ export default function MobileNav() {
       justify={"space-between"}
     >
       <Box as="span">
-        <Link href="/">
+        <Link href="/"> 
           <Image src={"/img/shared/logo.svg"} width="40px" height="40px" />
         </Link>
       </Box>
 
-      <Box ref={btnRef} colorScheme="teal" onClick={onOpen}>
+      <Box>
+        <Box as="span" ref={btnRef}  onClick={onOpen}>
         <Image
           src={"/img/shared/icon-hamburger.svg"}
           width="24px"
           height="21px"
         />
+        </Box>
         <Drawer
           isOpen={isOpen}
           placement="right"

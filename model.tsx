@@ -5,7 +5,14 @@ interface ArrayWithObject {
   travel: string;
   distance: string;
 }
-
+interface crewArrayWithObject {
+  name: string;
+  images: { png: string; webp: string };
+  role: string;
+  height?: number;
+  width?: number;
+  bio: string;
+}
 export const destinations: Array<ArrayWithObject> = [
   {
     name: "Moon",
@@ -53,9 +60,11 @@ export const destinations: Array<ArrayWithObject> = [
   },
 ];
 
-const crew = [
+export const crew: Array<crewArrayWithObject> = [
   {
     name: "Douglas Hurley",
+    width: 177,
+    height: 222,
     images: {
       png: "/img/crew/image-douglas-hurley.png",
       webp: "/img/crew/image-douglas-hurley.webp",
@@ -65,6 +74,9 @@ const crew = [
   },
   {
     name: "Mark Shuttleworth",
+    width: 180.73,
+    height: 222,
+
     images: {
       png: "/img/crew/image-mark-shuttleworth.png",
       webp: "/img/crew/image-mark-shuttleworth.webp",
@@ -74,6 +86,9 @@ const crew = [
   },
   {
     name: "Victor Glover",
+    width: 226,
+    height: 223,
+
     images: {
       png: "/img/crew/image-victor-glover.png",
       webp: "/img/crew/image-victor-glover.webp",
@@ -83,6 +98,9 @@ const crew = [
   },
   {
     name: "Anousheh Ansari",
+    width: 226,
+    height: 223,
+
     images: {
       png: "/img/crew/image-anousheh-ansari.png",
       webp: "/img/crew/image-anousheh-ansari.webp",

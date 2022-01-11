@@ -6,11 +6,13 @@ import {
   Popover,
   PopoverTrigger,
   Stack,
+  HStack,
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import React from "react";
+import useMedia from "../../../useMediaQuery";
 
 export default function WithSubnavigation() {
   return (
@@ -36,34 +38,52 @@ export default function WithSubnavigation() {
 }
 
 const DesktopNav = () => {
+  const { isLaptopSize } = useMedia();
+
   return (
     <Stack
-      width="500px"
+      width={{ base: "", md: "500px", lg: "800px" }}
       height="96px"
       alignItems={"center"}
       justify={"center"}
       bg="rgba(255, 255, 255, 0.04)"
       backdropFilter="blur(81.5485px)"
       direction={"row"}
-      spacing="37px"
+      mt ={{lg:'40px'}}
+      spacing={{ base: "", md: "37px", lg: "50px" }}
     >
-      {NAV_ITEMS.map((navItem) => (
+      {NAV_ITEMS.map((navItem, index) => (
         <React.Fragment key={navItem.label}>
           <Popover trigger={"hover"} placement={"bottom-start"}>
             <PopoverTrigger>
               <Link href={navItem.href}>
-                <Heading
+                <HStack
                   as="span"
-                  p={2}
-                  fontSize={"14px"}
-                  letterSpacing={"2.36px"}
-                  fontWeight={400}
-                  fontFamily={"Barlow Condensed"}
-                  color="white"
-                  lineHeight={"17px"}
+                  alignItems="baseline"
+                  spacing={isLaptopSize ? "5px" : "0px"}
                 >
-                  {navItem.label}
-                </Heading>
+                  {isLaptopSize && (
+                    <Heading
+                      fontSize={"14px"}
+                      fontWeight={700}
+                      fontFamily={"Barlow Condensed"}
+                      color="white"
+                    >
+                      0{index}
+                    </Heading>
+                  )}
+
+                  <Heading
+                    fontSize={"14px"}
+                    letterSpacing={"2.36px"}
+                    fontWeight={400}
+                    fontFamily={"Barlow Condensed"}
+                    color="white"
+                    lineHeight={"17px"}
+                  >
+                    {navItem.label}
+                  </Heading>
+                </HStack>
               </Link>
             </PopoverTrigger>
           </Popover>
@@ -73,41 +93,6 @@ const DesktopNav = () => {
   );
 };
 
-const DesktopSubNav = ({ label, href }: NavItem) => {
-  return (
-    <Link
-      href={href}
-      role={"group"}
-      display={"block"}
-      p={2}
-      rounded={"md"}
-      _hover={{ bg: useColorModeValue("pink.50", "gray.900") }}
-    >
-      <Stack direction={"row"} align={"center"}>
-        <Box>
-          <Text
-            transition={"all .3s ease"}
-            _groupHover={{ color: "pink.400" }}
-            fontWeight={500}
-          >
-            {label}
-          </Text>
-        </Box>
-        <Flex
-          transition={"all .3s ease"}
-          transform={"translateX(-10px)"}
-          opacity={0}
-          _groupHover={{ opacity: "100%", transform: "translateX(0)" }}
-          justify={"flex-end"}
-          align={"center"}
-          flex={1}
-        >
-          {/* <Icon color={"pink.400"} w={5} h={5} as={ChevronRightIcon} /> */}
-        </Flex>
-      </Stack>
-    </Link>
-  );
-};
 
 interface NavItem {
   label: string;

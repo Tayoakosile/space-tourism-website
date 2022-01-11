@@ -5,9 +5,10 @@ const Header = ({ no, word }: { no: string; word: string }) => {
   return (
     <HStack
       justify={{ base: "center", md: "flex-start" }}
-      pl={{ base: "", lg: "12" }}
-      alignItems={"center"}
-      pb={{ base: "", md: "", lg: "50px" }}
+      pl={{ base: "", md: "38.5px", lg: "14" }}
+      mt={{ md: "130px", lg: "12" }}
+      alignItems={{ base: "center", md: "baseline" }}
+      pb={{ base: "", md: "60px", lg: "30px" }}
     >
       <Heading
         fontFamily={"Barlow Condensed"}
@@ -16,10 +17,11 @@ const Header = ({ no, word }: { no: string; word: string }) => {
         color="#FFFFFF"
         opacity="0.25"
         as="span"
+        fontSize={{ md: "20px", lg: "28px" }}
       >
         0{no}
       </Heading>
-      <Heading as="p" size="sm">
+      <Heading fontSize={{ md: "24px", lg: "28px" }} as="p" size="sm">
         {word}
       </Heading>
     </HStack>

@@ -23,4 +23,9 @@ a {
     height: 445px !important;
   }
 }
-/* Image of SPace moon */
+/* Carousel */
+@media screen and (min-width: 760px) {
+  .alice-crew .alice-carousel_dots {
+    position: absolute !important;
+  }
+}
